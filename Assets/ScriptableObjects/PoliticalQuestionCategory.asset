@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd736b18cedb8949bcc95e31f385a45, type: 3}
+  m_Name: PoliticalQuestionCategory
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: "1.\tWhat is the right to vote referred to as?"
+    replies:
+    - "a)\tCivil right"
+    - "b)\tEconomic right"
+    - "c)\tSuffrage"
+    - "d)\tFreedom of speech"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: The document that protects political rights in most democratic
+      countries is called the?
+    replies:
+    - "a)\tDeclaration of Independence"
+    - "b)\tConstitution"
+    - "c)\tArticles of Confederation"
+    - "c)\tArticles of Confederation"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: What actions are permitted by the right to assemble as a citizen?
+    replies:
+    - "a)\tHold public office"
+    - "b)\tConstitution"
+    - "c)\tConvene peacefully for meetings or demonstrations"
+    - "d)\tOwn property"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: Which is protected under the African Charter on Human and Peoples'
+      Rights?
+    replies:
+    - a) The right to a fair trial
+    - b) The right to bear arms
+    - c) The right to tribal leadership
+    - d) The right to monarchy
+    correctReplyIndex: 0
+    questionCategory: 0
+  - questionText: What political rights are frequently challenged in African elections?
+    replies:
+    - "a)\tFreedom of speech"
+    - "b)\tSuffrage"
+    - "c)\tRight to form political parties"
+    - "c)\tRight to form political parties"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: Which legal precept guarantees that everyone is held to the same
+      legal standards and that no one is above the law?
+    replies:
+    - "a)\tSovereignty"
+    - "b)\tRule of Law"
+    - "c)\tAutocracy"
+    - "d)\tLegalism"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: What does the "one person, one vote" principle safeguard against
+      in many democratic systems?
+    replies:
+    - "a)\tElectoral fraud"
+    - "b)\tVoter suppression"
+    - "c)\tGerrymandering"
+    - "d)\tDisenfranchisement"
+    correctReplyIndex: 0
+    questionCategory: 0
+  - questionText: In a democracy, what does the term "political pluralism" mean?
+    replies:
+    - "a)\tAn absolute monarchy"
+    - "b)\tA single dominant party"
+    - "c)\tThe coexistence of several political parties and ideas"
+    - "d)\tThe union of all political parties"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: Which legal protection ensures that every eligible person can take
+      part in the election process without fear of violence?
+    replies:
+    - "a)\tRight to assemble"
+    - "b)\tRight to petition"
+    - "c)\tRight to free and fair elections"
+    - "d)\tRight to property"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: What does the right to political asylum ensure?
+    replies:
+    - "a)\tRight to vote"
+    - "b)\tProtection from persecution in one's own country"
+    - "c)\tProperty ownership"
+    - "d)\tPolitical participation"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: What role does the freedom of expression and ideas have in a democracy?
+    replies:
+    - "a)\tIt permits censorship by the government."
+    - "b)\tIt  upholds military control"
+    - "c)\tIt limits educational opportunities"
+    - "d)\tIt encourages discussion and public opinion formation"
+    correctReplyIndex: 3
+    questionCategory: 0
+  - questionText: How does gerrymandering affect political rights?
+    replies:
+    - "a)\tIt increases the number of voters"
+    - "b)\tIt manipulates electoral boundaries for political purposes"
+    - "c)\tIt encourages fair representation"
+    - "d)\tIt fortifies judicial supervision"
+    correctReplyIndex: 3
+    questionCategory: 0
+  - questionText: ' In a political system, what does the freedom of religion and
+      belief protect?'
+    replies:
+    - "a)\tThe right to privacy"
+    - "b)\tThe freedom to follow one's faith freely and to stop practicing it altogether"
+    - "c)\tVoting rights"
+    - "d)\tThe ability to keep and carry arms"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: Which political right is most closely linked to the capacity to
+      contest the validity of one's incarceration?
+    replies:
+    - a)       Right to privacy
+    - "b)\tRight to a fair trial"
+    - "c)\tHabeas corpus"
+    - "d)\tRight to legal representation"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: In what ways does the freedom to engage in politics fend off the
+      reign of authoritarians?
+    replies:
+    - "a)\tIt guarantees that the public has a say in laws and policies"
+    - "b)\tIt gives military coups a legal foundation"
+    - 'c)      It restricts the right to free expression '
+    - "d)\tIt limits the availability of public services."
+    correctReplyIndex: 0
+    questionCategory: 0
+  - questionText: What kind of political process permits the removal of an elected
+      politician before their tenure is up?
+    replies:
+    - "a)\tImpeachment"
+    - "b)\tReferendum"
+    - "c)\tCoup d'\xE9tat"
+    - "d)\tJudicial review"
+    correctReplyIndex: 0
+    questionCategory: 0
+  - questionText: What effect does the right to be free from discrimination have
+      on engaging in politics?
+    replies:
+    - "a)\tIt assures that only specific groups are eligible to vote"
+    - "b)\tIt ensures that all citizens have equal access to political processes"
+    - "c)\tIt caps the number of candidates in an election "
+    - "d)\tIt curtails the right to assemble in public"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: What does the right to peaceful assembly guard against?
+    replies:
+    - "a)\tGovernment surveillance "
+    - "b)\tArbitrary arrest"
+    - "c)\tForcible exile "
+    - "d)\tPolice brutality during demonstrations"
+    correctReplyIndex: 3
+    questionCategory: 0
+  - questionText: What function does an Ombudsman serve in relation to political
+      rights?
+    replies:
+    - a)      What function does an Ombudsman serve in relation to political rights?
+    - "b)\tTo look into and resolve complaints made against public officials or government
+      agencies"
+    - "c)\tTo control the media"
+    - "d)\tTo create legislation"
+    correctReplyIndex: 1
+    questionCategory: 0
+  - questionText: What is the significance of the right to non-retroactivity under
+      criminal law?
+    replies:
+    - "a)\tPrevents prosecution for acts that were not crimes at the time it was
+      committed"
+    - "b)\tAllows for arbitrary prosecution of political opponents"
+    - "c)\tEnables the government to amend laws at any time"
+    - "d)\tLimits access to legal representation"
+    correctReplyIndex: 0
+    questionCategory: 0
+  - questionText: What does a democratic citizen's right to take part in public affairs
+      serve to accomplish?
+    replies:
+    - "a)\tTo restrict political involvement to a small group of people"
+    - "b)\tTo impose restrictions on the right to free expression"
+    - "c)\tTo guarantee that the public has a say in government policies and decisions"
+    - "d)\tTo uphold the authority of the ruling class"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: What larger category of rights does the petitioning of government
+      fall under
+    replies:
+    - "a)\tFreedom of Speech"
+    - "b)\tCivil Right"
+    - "c)\tEconomic Right"
+    - "d)\tFreedom of AssemblyRight"
+    correctReplyIndex: 0
+    questionCategory: 0
+  - questionText: What does the right to privacy protect people from?
+    replies:
+    - "a)\tUnlawful detention"
+    - "b)\tGender discrimination"
+    - "c)\tCharacter slander"
+    - "d)\tUnauthorized searches and seizures"
+    correctReplyIndex: 3
+    questionCategory: 0
+  - questionText: What is a fundamental characteristic of democracy?
+    replies:
+    - "a)\tOne leader in charge"
+    - "b)\tOpposition party suppression"
+    - "c)\tFree and fair elections"
+    - "d)\tPress censorship by the government"
+    correctReplyIndex: 2
+    questionCategory: 0
+  - questionText: What is ensured by the right to nationality?
+    replies:
+    - "a)\tThe freedom to keep and carry weapons"
+    - "b)\tThe right to nationality and national security"
+    - "c)\tThe right to possess property"
+    - "d)\tThe right to privacy"
+    correctReplyIndex: 1
+    questionCategory: 0

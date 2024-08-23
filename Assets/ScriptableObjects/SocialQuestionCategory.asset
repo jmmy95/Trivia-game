@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd736b18cedb8949bcc95e31f385a45, type: 3}
+  m_Name: SocialQuestionCategory
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: Which international document is often referenced in protecting
+      social rights across African countries?
+    replies:
+    - The United Nations Charter
+    - The African Union Constitutive Act
+    - The Universal Declaration of Human Rights
+    - The Kyoto Protocol
+    correctReplyIndex: 2
+    questionCategory: 3
+  - questionText: Which of the following social rights is recognized as essential
+      for the protection of children in Africa?
+    replies:
+    - The right to inherit property
+    - The right to be free from child labor and exploitation
+    - The right to engage in political activities
+    - The right to carry out business transactions
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: "3.\tWhat is a significant barrier to the full realization of social
+      rights, including healthcare and education, in many African countries?"
+    replies:
+    - Climate change
+    - Economic inequality and poverty
+    - High levels of tourism
+    - Lack of natural resources
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: Which of the following is included in an adequate standard of living?
+    replies:
+    - Housing
+    - Clothing
+    - ' Food'
+    - All of the above
+    correctReplyIndex: 3
+    questionCategory: 3
+  - questionText: Which social right is most often linked to addressing gender inequality
+      in African nations?
+    replies:
+    - The right to equal pay for equal work
+    - The right to vote
+    - The right to freedom of expression
+    - The right to access clean water
+    correctReplyIndex: 0
+    questionCategory: 3
+  - questionText: Which of the following is considered a basic social right?
+    replies:
+    - The right to work
+    - The right to healthcare
+    - The right to vote
+    - The right to free speech
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: What is the primary focus of social rights?
+    replies:
+    - Political participation
+    - Economic development
+    - Basic needs and welfare
+    - Environmental protection
+    correctReplyIndex: 2
+    questionCategory: 3
+  - questionText: Which organization is most responsible for promoting social rights
+      globally?
+    replies:
+    - 'NATO   '
+    - United Nations
+    - FIFA
+    - World Trade Organization
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: The right to education is an example of which type of right?
+    replies:
+    - Civil right
+    - Political right
+    - Social right
+    - Personal right
+    correctReplyIndex: 2
+    questionCategory: 3
+  - questionText: Which document explicitly mentions the right to an adequate standard
+      of living?
+    replies:
+    - The Geneva Conventions
+    - The Universal Declaration of Human Rights
+    - The Paris Agreement
+    - The African Union Constitutive Act
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: What is a key social right under the African Charter on Human and
+      Peoples' Rights?
+    replies:
+    - The right to freedom of expression
+    - The right to health
+    - The right to own property
+    - The right to a fair trial
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: Which social right is closely linked to ensuring gender equality?
+    replies:
+    - The right to participate in elections
+    - The right to work without discrimination
+    - The right to bear arms
+    - The right to assemble
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: ' In many African countries, what is a primary challenge in ensuring
+      social rights?'
+    replies:
+    - High levels of crime
+    - Political instability
+    - Lack of natural resources
+    - Inequality in resource distribution
+    correctReplyIndex: 3
+    questionCategory: 3
+  - questionText: What is the main purpose of social security systems?
+    replies:
+    - To provide financial support during retirement
+    - To regulate the banking sector
+    - To increase tax revenue
+    - To promote international trade
+    correctReplyIndex: 0
+    questionCategory: 3
+  - questionText: Which African country is known for having one of the most progressive
+      social rights constitutions?
+    replies:
+    - Egypt
+    - South Africa
+    - Nigeria
+    - Kenya
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: What is the key goal of the Social Protection Floor initiative
+      endorsed by the International Labour Organization (ILO)?
+    replies:
+    - To regulate labor markets
+    - To provide a universal guarantee of basic income and access to essential healthcare
+    - To protect intellectual property
+    - To monitor environmental policies
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: Which African country was the first to provide universal healthcare
+      coverage?
+    replies:
+    - Rwanda
+    - Ghana
+    - Morocco
+    - South Africa
+    correctReplyIndex: 0
+    questionCategory: 3
+  - questionText: The right to adequate housing in African countries is often linked
+      with which broader global initiative?
+    replies:
+    - The Sustainable Development Goals (SDGs)
+    - The Kyoto Protocol
+    - The Paris Agreement
+    - The North American Free Trade Agreement (NAFTA)
+    correctReplyIndex: 0
+    questionCategory: 3
+  - questionText: Which international treaty focuses specifically on the rights of
+      women in Africa, including social rights like healthcare and education?
+    replies:
+    - The African Charter on Human and Peoples' Rights
+    - The Maputo Protocol
+    - The Marrakesh Agreement
+    - The Abuja Declaration
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: In many African countries, what social right is often at the center
+      of land reform debates?
+    replies:
+    - The right to privacy
+    - The right to own and access land
+    - The right to freedom of expression
+    - The right to a fair trial
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: Which African country has been recognized for its social rights
+      initiatives targeting youth unemployment through education and skills training?
+    replies:
+    - Uganda
+    - Botswana
+    - Mauritius
+    - Ethiopia
+    correctReplyIndex: 2
+    questionCategory: 3
+  - questionText: The African Commission on Human and Peoples' Rights established
+      a special rapporteur on what social rights in response to widespread violations?
+    replies:
+    - The right to housing
+    - The right to education
+    - The right to health
+    - The right to food
+    correctReplyIndex: 2
+    questionCategory: 3
+  - questionText: Which article of the Universal Declaration of Human Rights addresses
+      the right to social security?
+    replies:
+    - Article 22
+    - Article 15
+    - Article 10
+    - Article 2
+    correctReplyIndex: 0
+    questionCategory: 3
+  - questionText: "What was the major focus of the 2016 African Union Assembly\u2019s
+      theme \"Year of Human Rights with a Particular Focus on the Rights of Women\"?"
+    replies:
+    - Promoting political rights for women
+    - Advancing social and economic rights for women
+    - Increasing women's representation in government
+    - Addressing violence against women
+    correctReplyIndex: 1
+    questionCategory: 3
+  - questionText: In African regional human rights law, which landmark case is often
+      cited in discussions of the right to housing and property?
+    replies:
+    - The Ogoni case (Nigeria)
+    - 'The Nubian case (Kenya) '
+    - The Katangese Peoples' Congress case (DRC)
+    - The Endorois case (Kenya)
+    correctReplyIndex: 3
+    questionCategory: 3

@@ -1,0 +1,231 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd736b18cedb8949bcc95e31f385a45, type: 3}
+  m_Name: EconomicQuestionCategory
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: What is an economic right?
+    replies:
+    - The right to freedom of speech
+    - The right to privacy
+    - The right to employment
+    - The right to vote
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: Which international document first articulated the right to work?
+    replies:
+    - The Universal Declaration of Human Rights
+    - The Geneva Conventions
+    - The Kyoto Protocol
+    - The Paris Agreement
+    correctReplyIndex: 0
+    questionCategory: 2
+  - questionText: Which of the following is a basic economic right?
+    replies:
+    - The right to free speech
+    - The right to fair wages
+    - The right to vote
+    - The right to education
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: What does the right to social security provide?
+    replies:
+    - Free education for all
+    - Protection from environmental harm
+    - Financial support in times of need, such as during unemployment, disability,
+      or retirement
+    - Access to free healthcare
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: Which organization primarily promotes economic rights globally?
+    replies:
+    - World Health Organization (WHO)
+    - International Labour Organization (ILO)
+    - World Trade Organization (WTO)
+    - United Nations Children's Fund (UNICEF)
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: What is the key purpose of the right to form and join trade unions?
+    replies:
+    - To promote international trade
+    - "To protect workers\u2019 interests and improve working conditions"
+    - To manage financial resources
+    - To control market prices
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: Which right ensures workers are protected from unfair dismissal?
+    replies:
+    - The right to privacy
+    - The right to vote
+    - The right to job security
+    - The right to free speech
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: What is the significance of the right to equal pay for equal work?
+    replies:
+    - To ensure a minimum wage for all workers
+    - To ensure that men and women receive the same pay for the same work
+    - To guarantee employment for everyone
+    - To regulate working hours
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: The right to a safe and healthy working environment is part of
+      which broader category of rights?
+    replies:
+    - Political rights
+    - Civil rights
+    - Economic rights
+    - Environmental rights
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: Which economic right ensures that workers are compensated fairly
+      for their labor and are protected from exploitation
+    replies:
+    - 'The right to job security  '
+    - 'The right to fair wages  '
+    - 'The right to form trade unions  '
+    - 'The right to access financial resources  '
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: What is the primary objective of minimum wage laws?
+    replies:
+    - To increase corporate profits
+    - To reduce unemployment
+    - To ensure that workers receive a living wage
+    - To promote international trade
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: Which economic right is closely associated with the concept of
+      collective bargaining?
+    replies:
+    - The right to form and join trade unions
+    - The right to vote
+    - The right to freedom of expression
+    - The right to privacy
+    correctReplyIndex: 0
+    questionCategory: 2
+  - questionText: In the context of economic rights, what is the purpose of social
+      insurance programs?
+    replies:
+    - To provide free education
+    - To provide protection against economic risks such as unemployment and illness
+    - To regulate financial markets
+    - To promote environmental conservation
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: Which international agreement focuses on protecting workers' rights,
+      including economic rights?
+    replies:
+    - The Paris Agreement
+    - The Geneva Conventions
+    - The North American Free Trade Agreement (NAFTA)
+    - The International Covenant on Economic, Social and Cultural Rights (ICESCR)
+    correctReplyIndex: 3
+    questionCategory: 2
+  - questionText: Which right is essential for ensuring access to basic financial
+      services and economic opportunities?
+    replies:
+    - The right to freedom of speech
+    - The right to access financial resources
+    - The right to education
+    - The right to social security
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: What is the relationship between economic rights and the right
+      to development?
+    replies:
+    - Economic rights are independent of development issues
+    - Development is only possible if economic rights are restricted
+    - Economic rights are essential for achieving sustainable development and reducing
+      poverty
+    - Development is primarily a political issue, unrelated to economic rights
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: Which African country was one of the first to implement comprehensive
+      social security and labor laws?
+    replies:
+    - South Africa
+    - Kenya
+    - Nigeria
+    - Egypt
+    correctReplyIndex: 0
+    questionCategory: 2
+  - questionText: What is the primary challenge in enforcing economic rights in developing
+      countries?
+    replies:
+    - Overpopulation
+    - Political stability
+    - Economic inequality and lack of resources
+    - Environmental degradation
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: The right to decent work is part of which global initiative?
+    replies:
+    - The Sustainable Development Goals (SDGs)
+    - ' The Kyoto Protocol'
+    - The Geneva Conventions
+    - The Universal Declaration of Human Rights
+    correctReplyIndex: 0
+    questionCategory: 2
+  - questionText: Which landmark case addressed the violation of economic rights
+      in the context of forced labor in Africa?
+    replies:
+    - The Endorois case (Kenya)
+    - The Ogoni case (Nigeria)
+    - The Katangese Peoples' Congress case (DRC)
+    - The Nubian case (Kenya)
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: In what way do economic rights intersect with environmental rights?
+    replies:
+    - Economic activities should have priority over environmental concerns
+    - Economic rights are completely separate from environmental rights
+    - Environmental protection is more important than economic rights
+    - Economic activities should be conducted in a manner that does not harm the
+      environment, ensuring sustainable livelihoods
+    correctReplyIndex: 3
+    questionCategory: 2
+  - questionText: Which African organization has a specific focus on promoting economic
+      rights and development?
+    replies:
+    - African Union (AU)
+    - Southern African Development Community (SADC)
+    - African Development Bank (AfDB)
+    - Economic Community of West African States (ECOWAS)
+    correctReplyIndex: 2
+    questionCategory: 2
+  - questionText: What is the impact of gender inequality on economic rights in many
+      African countries?
+    replies:
+    - It improves access to economic opportunities for women
+    - It limits women's access to economic opportunities and resources
+    - It has no effect on economic rights
+    - It only affects political rights
+    correctReplyIndex: 1
+    questionCategory: 2
+  - questionText: Which international framework emphasizes the importance of economic
+      rights for achieving peace and stability?
+    replies:
+    - The United Nations Global Compact
+    - The Kyoto Protocol
+    - The Marrakesh Agreement
+    - The Paris Agreement
+    correctReplyIndex: 0
+    questionCategory: 2
+  - questionText: Which economic right is most affected by globalization?
+    replies:
+    - The right to vote
+    - The right to education
+    - The right to work
+    - The right to privacy
+    correctReplyIndex: 2
+    questionCategory: 2

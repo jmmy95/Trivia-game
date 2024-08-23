@@ -3,140 +3,125 @@ using System.Collections.Generic;
 using UnityEditor.PackageManager.Requests;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using System;
+using Unity.VisualScripting;
+using UnityEngine.SocialPlatforms.Impl;
 
-public class QuestionManager : MonoBehaviour
-{
-    
+public class QuestionManager : MonoBehaviour {
     public Text questionText;
-
     public Text scoreText;
-
     public Text timeScore;
-
     public Text FinalScore;
-
     public Button[] replyButtons;
+    public Button[] categoryButtons;  //The buttons for the categories
 
-    public QuestionsData questionData;//Reference to the scriptable object.
+    // References to ScriptableObjects for each category
+    public QuestionsData politicalQuestionsCategory;
+    public QuestionsData civilQuestionsCategory;
+    public QuestionsData economicQuestionsCategory;
+    public QuestionsData socialQuestionsCategory;
 
     public GameObject Right;
-
     public GameObject Wrong;
-
     public GameObject GameOver;
 
-    private int currentQueston = 0;
+    private QuestionsData selectedQuestions; // To hold the currently active category
+    private int currentQuestionIndex;
 
-    private static int score = 0;
 
-    private void Start()
-    {
-        score = 0;
-        SetQuestion(currentQueston);
+
+
+    private void Start() {
+        //Hide the question and reply UI initially
+        setQuestionUIActive(false);
         Right.gameObject.SetActive(false);
         Wrong.gameObject.SetActive(false);
         GameOver.gameObject.SetActive(false);
+        //Wait for the category selection before starting the game
     }
 
-    void SetQuestion(int questionIndex)
-    {
-        questionText.text = questionData.questions[questionIndex].questionText;
-        foreach (Button r in replyButtons)
-        {
-            r.onClick.RemoveAllListeners();
+    public void OnCategorySelected(string Category)
+     {
+        //determine which category was selected
+        switch (Category)
+         {
+            case "Political":
+                selectedQuestions = politicalQuestionsCategory;
+                break;
+            case "Social":
+                selectedQuestions = socialQuestionsCategory;
+                break;
+            case "Civil":
+                selectedQuestions = civilQuestionsCategory;
+                break;
+            case "Economic":
+                selectedQuestions = economicQuestionsCategory;
+                break;
         }
-
-        for (int i = 0; i < replyButtons.Length; i++)
-        {
-            replyButtons[i].GetComponentInChildren<Text>().text = questionData.questions[questionIndex].replies[i];
-            int replyIndex = i;
-            replyButtons[i].onClick.AddListener(() =>
-            {
-                CheckReply(replyIndex);
-            });
-        }
+        //Hide category buttons and show the first question from the selected category
+        SetCategoryUIActive(false);
+        setQuestionUIActive(true);
+        currentQuestionIndex = 0;
+        DisplayQuestion();
     }
 
-    void CheckReply(int replyIndex)
-    {
-        if (replyIndex == questionData.questions[currentQueston].correctReplyIndex)
-        {
-            score++;
-            scoreText.text = "Score: " + score;
+    private void DisplayQuestion() 
+     {
+        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
+            questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
 
-            Right.gameObject.SetActive(true);
+            for (int i = 0; i < replyButtons.Length; i++) {
+                replyButtons[i].GetComponentInChildren<Text>().text = selectedQuestions.questions[currentQuestionIndex].replies[i];
+                int replyIndex = i; // Capture the index for use in the lambda
+                replyButtons[i].onClick.RemoveAllListeners();
 
-            foreach (Button r in replyButtons)
-            {
-                r.interactable = false;
-            }
-
-            StartCoroutine(Next());
-        }
-        else
-        {
-            Wrong.gameObject.SetActive(true );
-
-            foreach(Button r in replyButtons)
-            {
-                r.interactable=false;
-
-                StartCoroutine(Next());
+                replyButtons[i].onClick.AddListener(() => CheckReply(replyIndex));
             }
         }
     }
 
-    IEnumerator Next()
-    {
-        yield return new WaitForSeconds(2);
-        currentQueston++;
-        
-        if(currentQueston < questionData.questions.Length)
-        {
-            Reset();
+    public void CheckReply(int replyIndex) {
+        if (replyIndex == selectedQuestions.questions[currentQuestionIndex].correctReplyIndex) {
+            // Correct answer logic
+            Debug.Log("Correct!");
+        } else {
+            // Incorrect answer logic
+            Debug.Log("Incorrect!");
         }
-        else
+
+        // Move to the next question
+        currentQuestionIndex++;
+
+        if (currentQuestionIndex < selectedQuestions.questions.Length)
+         {
+            DisplayQuestion();
+        } 
+        else 
         {
-            GameOver.SetActive(true ); 
-
-            float scorePercantage = (float)score /questionData.questions.Length*100;
-
-            FinalScore.text = "You Scored: " + scorePercantage.ToString("F0") +"%";
-
-            if(scorePercantage < 50)
-            {
-                FinalScore.text += "\nGame Over";
-            }
-            else if(scorePercantage < 60)
-            {
-                FinalScore.text += "\nKeep Trying";
-            }
-            else if(scorePercantage < 70)
-            {
-                FinalScore.text += "\nGood Joob";
-            }
-            else if( scorePercantage < 80)
-            {
-                FinalScore.text += "\nWell Done";
-            }
-            else
-            {
-                FinalScore.text += "\n You are Fantastic";
-            }
+            // End of questions logic
+            Debug.Log("End of Category Questions");
         }
     }
 
-    public void Reset()
+    private void SetCategoryUIActive(bool isActive) 
+     {
+        foreach (Button btn in categoryButtons)
+         {
+            btn.gameObject.SetActive(isActive);
+        }
+    }
+
+    private void setQuestionUIActive(bool isActive)
     {
-        Right.SetActive(false);
-        Wrong.SetActive(false);
+        questionText.gameObject.SetActive(isActive);
 
-        foreach(Button r in replyButtons)
+        foreach (Button btn in replyButtons) 
         {
-            r.interactable = true;
-
-            SetQuestion(currentQueston);
+            btn.gameObject.SetActive(isActive);
         }
     }
 }
+   
+
+   

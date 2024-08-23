@@ -1,0 +1,234 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cd736b18cedb8949bcc95e31f385a45, type: 3}
+  m_Name: CivilQuestionCategory
+  m_EditorClassIdentifier: 
+  questions:
+  - questionText: In what ways does the right to be free from unjust arrest safeguard
+      people?
+    replies:
+    - "a)\tEnsure no one is detained without due process"
+    - "b)\tAllow detention without legal cause"
+    - "c)\tEncourage indefinite imprisonment."
+    - "d)\tLimit access to legal representation."
+    correctReplyIndex: 0
+    questionCategory: 1
+  - questionText: How does the right to be free from torture promote human dignity?
+    replies:
+    - "a)\tBy permitting torture in dire circumstances"
+    - "b)\tBy making certain that no one experiences harsh treatment"
+    - "c)\tLimiting legal protections"
+    - "d)\tBy endorsing harsh techniques of questioning"
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: What is conferred by the right to own property?
+    replies:
+    - "a)\tThe government can seize property at will"
+    - "b)\tOnly members of specific groups are allowed to hold property"
+    - "c)\tPeople can own property without outside intervention"
+    - "d)\tSocial position limits the amount of property rights "
+    correctReplyIndex: 2
+    questionCategory: 1
+  - questionText: Which situation makes it most probable that the law will restrict
+      the right to free speech?
+    replies:
+    - "a)\tWhen it is used to encourage violence or hatred"
+    - "b)\tWhen it expresses viewpoints critical of the government"
+    - "c)\tWhen it involves controversial but nonviolent speech"
+    - "d)\tWhen it is shared on private social media platforms"
+    correctReplyIndex: 0
+    questionCategory: 1
+  - questionText: How might the right to participate in the government be jeopardized
+      in a democracy?
+    replies:
+    - "a)\tBy gerrymandering electoral districts to benefit specific parties"
+    - "b)\tAllowing all eligible citizens to vote"
+    - "c)\tProviding equal access to voting facilities"
+    - "d)\tTo prevent foreign meddling in elections"
+    correctReplyIndex: 0
+    questionCategory: 1
+  - questionText: How might the right to free movement be curtailed during a national
+      emergency?
+    replies:
+    - "a)\tRegulating the transportation routes"
+    - "b)\tAllowing free movement within the country"
+    - "c)\tClosing borders with neighboring countries "
+    - "d)\tImposing curfews"
+    correctReplyIndex: 3
+    questionCategory: 1
+  - questionText: Which civil right does the right to marry, regardless of race or
+      gender extend into?
+    replies:
+    - "a)\tRight to a fair trial"
+    - "b)\tRight to privacy"
+    - "c)\tRight to freedom of movement"
+    - "d)\tRight to equality"
+    correctReplyIndex: 3
+    questionCategory: 1
+  - questionText: Which civil right protects against unlawful intrusion into one's
+      home?
+    replies:
+    - "a)\tRight to property"
+    - "b)\tRight to privacy"
+    - "c)\tRight to a fair trial"
+    - "d)\tFreedom of assembly"
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: Which legal procedure guards against facing two prosecutions for
+      the same offense?
+    replies:
+    - "a)\tRight to equality"
+    - "b)\tDouble jeopardy"
+    - "c)\tRight to due process"
+    - "d)\tRight to life"
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: Which civil right includes protection for intellectual works?
+    replies:
+    - "a)\tRight to life"
+    - "b)\tRight to equality"
+    - "c)\tIntellectual property right"
+    - "d)\tRight to a fair trial"
+    correctReplyIndex: 2
+    questionCategory: 1
+  - questionText: What civil right includes the preservation of minority languages?
+    replies:
+    - "a)\tLinguistic rights"
+    - "b)\tRight to privacy"
+    - "c)\tRight to equality"
+    - "d)\tRight to education"
+    correctReplyIndex: 0
+    questionCategory: 1
+  - questionText: Which of the following civil rights guarantees access to basic
+      education?
+    replies:
+    - "a)\tRight to privacy"
+    - "b)\tRight to equality"
+    - "c)\tRight to education"
+    - "d)\tRight to property"
+    correctReplyIndex: 2
+    questionCategory: 1
+  - questionText: What is protected by the principle of non-refoulement in the context
+      of civil rights?
+    replies:
+    - "a)\tIllegal imprisonment"
+    - "b)\tPrejudice in the workplace"
+    - "c)\tDeportation to a nation where the person is subjected to abuse or persecution"
+    - "d)\tViolation of property rights"
+    correctReplyIndex: 2
+    questionCategory: 1
+  - questionText: Which international legal instrument is most closely linked to
+      protecting civil rights across nations?
+    replies:
+    - "a)\tGeneva Conventions"
+    - "b)\tUniversal Declaration of Human Rights"
+    - "c)\tParis Agreement"
+    - "d)\tMagna Carta"
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: What impact does the principle of proportionality have on the limitations
+      of civil rights?
+    replies:
+    - "a)\tIt accepts any limitation as long as it benefits the majority."
+    - "b)\tIt allows governments to limit rights during times of economic difficulty."
+    - "c)\tIt prioritizes economic development over individuals' rights."
+    - "d)\tLimitations on rights must be appropriate and necessary to achieve a legitimate
+      goal."
+    correctReplyIndex: 3
+    questionCategory: 1
+  - questionText: Which civil right is most obviously infringed when the government
+      blocks the internet without authorization?
+    replies:
+    - "a)\tRight to freedom of movement"
+    - "b)\tRight to privacy"
+    - "c)\tRight to property"
+    - "d)\tFreedom of expression"
+    correctReplyIndex: 3
+    questionCategory: 1
+  - questionText: In what situations is it legal to restrict someone's ability to
+      vote?
+    replies:
+    - "a)\tIf the person is legally underage"
+    - "b)\tPolitical affiliation"
+    - "c)\tFailure to pay taxes"
+    - "d)\tLiteracy requirements"
+    correctReplyIndex: 0
+    questionCategory: 1
+  - questionText: How does the principle of nullum crimen, nulla poena sine lege
+      apply to civil rights?
+    replies:
+    - "a)\tIt permits retroactive punishments for offenses"
+    - "b)\tIt forbids punishment in the absence of an earlier statute that defines
+      the offense"
+    - "c)\tIt requires heavier punishments for offenses against the state"
+    - "d)\tIt allows punishment based on social standards as opposed to codified
+      law."
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: A law that prohibits members of a certain ethnic group from holding
+      public office would violate which civil right?
+    replies:
+    - "a)\tRight to own property"
+    - "b)\tRight to freedom of speech"
+    - "c)\tRight to equality"
+    - "d)\tRight to privacy"
+    correctReplyIndex: 2
+    questionCategory: 1
+  - questionText: Which civil right is most closely related to ensuring that ethnic
+      minorities are protected?
+    replies:
+    - "a)\tRight to life"
+    - "b)\tRight to education"
+    - "c)\tRight to self-determination"
+    - "d)\tRight to non-discrimination"
+    correctReplyIndex: 3
+    questionCategory: 1
+  - questionText: What protections does the right to restitution offer?
+    replies:
+    - "a)\tDirect government compensation"
+    - "b)\tCompensation for breaches of human rights"
+    - "c)\tApologies in public"
+    - "d)\tUnconditional compensation"
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: What does the right to due process ensure?
+    replies:
+    - "a)\tAutomatic appeals"
+    - "b)\tQuick case resolution"
+    - "c)\tEquitable treatment before rights are taken away"
+    - "d)\tJury trials in all circumstances"
+    correctReplyIndex: 2
+    questionCategory: 1
+  - questionText: Which right is violated by unfair travel restrictions?
+    replies:
+    - "a)\tLiberty"
+    - "b)\tFair trial"
+    - "c)\tEqual protection"
+    - "d)\tLife"
+    correctReplyIndex: 0
+    questionCategory: 1
+  - questionText: Why is it necessary to have access to legal aid?
+    replies:
+    - "a)\tLegal representation for those who can afford it "
+    - "b)\tEqual justice for all, particularly marginalized groups"
+    - "c)\tFaster court proceedings "
+    - "d)\tPublic trials"
+    correctReplyIndex: 1
+    questionCategory: 1
+  - questionText: What is an essential component of the right to education?
+    replies:
+    - "a)\tUniversal access to higher education"
+    - "b)\tMandatory enrollment in private schools"
+    - "c)\tEducation in students' preferred language"
+    - "d)\tNon-discriminatory education"
+    correctReplyIndex: 3
+    questionCategory: 1
