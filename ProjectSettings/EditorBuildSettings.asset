@@ -10,8 +10,5 @@ EditorBuildSettings:
     guid: 0b80d4d00cb6c7c448f8353ee1dff14f
   - enabled: 1
     path: Assets/Scenes/TriviaGamePlay.unity
-    guid: 90b2e125fa3e20e48accbae49d81587a
-  - enabled: 1
-    path: Assets/Scenes/TriviaGameScene.unity
-    guid: ff0fd480927f1e047b105fb4a7c45cec
+    guid: 673ca0730b9de4ca79d6506fc48b3b30
   m_configObjects: {}
