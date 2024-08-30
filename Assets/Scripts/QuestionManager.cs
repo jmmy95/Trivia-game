@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestionManager : MonoBehaviour 
-{
+public class QuestionManager : MonoBehaviour {
     public Text questionText;
     public Text scoreText;
     public Text timeScore;
@@ -18,8 +17,8 @@ public class QuestionManager : MonoBehaviour
     public QuestionsData economicQuestionsCategory;
     public QuestionsData socialQuestionsCategory;
 
-    public GameObject Right;
-    public GameObject Wrong;
+    public GameObject Right;  // Reference to the "CORRECT" Text GameObject
+    public GameObject Wrong;  // Reference to the "CORRECT" Text GameObject
     public GameObject GameOver;
 
     private QuestionsData selectedQuestions; // To hold the currently active category
@@ -127,4 +126,3 @@ public class QuestionManager : MonoBehaviour
         }
     }
 }
-
