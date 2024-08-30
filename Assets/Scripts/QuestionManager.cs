@@ -86,10 +86,21 @@ public class QuestionManager : MonoBehaviour {
             if (replyIndex == selectedQuestions.questions[currentQuestionIndex].correctReplyIndex) {
                 // Correct answer logic
                 Debug.Log("Correct!");
+
+                // Show the "CORRECT" UI
+                Right.SetActive(true);
+                Wrong.SetActive(false);
             } else {
                 // Incorrect answer logic
                 Debug.Log("Incorrect!");
+
+                // Show the "INCORRECT" UI
+                Right.SetActive(false);
+                Wrong.SetActive(true);
             }
+
+            // Hide the "CORRECT" or "INCORRECT" UI after a delay
+            StartCoroutine(HideFeedback());
 
             // Move to the next question
             currentQuestionIndex++;
@@ -103,6 +114,13 @@ public class QuestionManager : MonoBehaviour {
         } else {
             Debug.LogError("SelectedQuestions is null or invalid reply index.");
         }
+    }
+
+    // Add a coroutine to hide feedback after a short delay
+    private IEnumerator HideFeedback() {
+        yield return new WaitForSeconds(2); // Wait for 2 seconds
+        Right.SetActive(false);
+        Wrong.SetActive(false);
     }
 
     private void SetCategoryUIActive(bool isActive) {
