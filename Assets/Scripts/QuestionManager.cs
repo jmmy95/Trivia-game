@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class QuestionManager : MonoBehaviour {
+public class QuestionManager : MonoBehaviour 
+{
     public Text questionText;
     public Text scoreText;
     public Text timeScore;
@@ -67,15 +68,17 @@ public class QuestionManager : MonoBehaviour {
     private void DisplayQuestion() {
         if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
             questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
+            Debug.Log("Displaying Question: " + questionText.text); // Log the question
 
             for (int i = 0; i < replyButtons.Length; i++) {
-                replyButtons[i].GetComponentInChildren<Text>().text = selectedQuestions.questions[currentQuestionIndex].replies[i];
+                string reply = selectedQuestions.questions[currentQuestionIndex].replies[i];
+                Debug.Log("Displaying Reply: " + reply); // Log each reply
+
+                replyButtons[i].GetComponentInChildren<Text>().text = reply;
                 int replyIndex = i; // Capture the index for use in the lambda
                 replyButtons[i].onClick.RemoveAllListeners();
                 replyButtons[i].onClick.AddListener(() => CheckReply(replyIndex));
             }
-        } else {
-            Debug.LogError("No more questions or invalid question index.");
         }
     }
 

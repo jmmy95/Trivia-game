@@ -3,7 +3,18 @@ guid: 0b85a72bfe6ece4418ec5b746cdf3f5a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - questionText: {instanceID: 0}
+  - scoreText: {instanceID: 0}
+  - timeScore: {instanceID: 0}
+  - FinalScore: {instanceID: 0}
+  - politicalQuestionsCategory: {fileID: 11400000, guid: bfae1e5533f13f54cba6d5e4a91003a9, type: 2}
+  - civilQuestionsCategory: {fileID: 11400000, guid: ad551ef0abbbbfa4eb3c1ce84fc63af2, type: 2}
+  - economicQuestionsCategory: {instanceID: 0}
+  - socialQuestionsCategory: {instanceID: 0}
+  - Right: {instanceID: 0}
+  - Wrong: {instanceID: 0}
+  - GameOver: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
