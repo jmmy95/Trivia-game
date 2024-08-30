@@ -17,8 +17,8 @@ public class QuestionManager : MonoBehaviour {
     public QuestionsData economicQuestionsCategory;
     public QuestionsData socialQuestionsCategory;
 
-    public GameObject Right;
-    public GameObject Wrong;
+    public GameObject Right;  // Reference to the "CORRECT" Text GameObject
+    public GameObject Wrong;  // Reference to the "CORRECT" Text GameObject
     public GameObject GameOver;
 
     private QuestionsData selectedQuestions; // To hold the currently active category
@@ -67,15 +67,17 @@ public class QuestionManager : MonoBehaviour {
     private void DisplayQuestion() {
         if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
             questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
+            Debug.Log("Displaying Question: " + questionText.text); // Log the question
 
             for (int i = 0; i < replyButtons.Length; i++) {
-                replyButtons[i].GetComponentInChildren<Text>().text = selectedQuestions.questions[currentQuestionIndex].replies[i];
+                string reply = selectedQuestions.questions[currentQuestionIndex].replies[i];
+                Debug.Log("Displaying Reply: " + reply); // Log each reply
+
+                replyButtons[i].GetComponentInChildren<Text>().text = reply;
                 int replyIndex = i; // Capture the index for use in the lambda
                 replyButtons[i].onClick.RemoveAllListeners();
                 replyButtons[i].onClick.AddListener(() => CheckReply(replyIndex));
             }
-        } else {
-            Debug.LogError("No more questions or invalid question index.");
         }
     }
 
@@ -111,6 +113,7 @@ public class QuestionManager : MonoBehaviour {
         }
     }
 
+
     private void setQuestionUIActive(bool isActive) {
         if (questionText != null) {
             questionText.gameObject.SetActive(isActive);
@@ -123,4 +126,3 @@ public class QuestionManager : MonoBehaviour {
         }
     }
 }
-
