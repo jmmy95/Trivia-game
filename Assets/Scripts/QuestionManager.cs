@@ -114,6 +114,7 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
+
     private void setQuestionUIActive(bool isActive) {
         if (questionText != null) {
             questionText.gameObject.SetActive(isActive);
