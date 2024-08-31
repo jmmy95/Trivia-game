@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
-public class QuestionManager : MonoBehaviour {
+public class QuestionManager : MonoBehaviour
+ {
     public Text questionText;
     public Text scoreText;
     public Text timeScore;
