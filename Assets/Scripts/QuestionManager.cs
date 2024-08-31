@@ -6,10 +6,8 @@ using UnityEngine.UI;
 
 public class QuestionManager : MonoBehaviour
  {
-    public Text questionText;
-    public Text scoreText;
-    public Text timeScore;
-    public Text FinalScore;
+    public TextMeshProUGUI questionText, scoreText, timeScore, FinalScore;
+  
     public Button[] replyButtons;
     public Button[] categoryButtons;  // The buttons for the categories
 
