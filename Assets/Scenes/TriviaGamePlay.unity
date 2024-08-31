@@ -736,6 +736,7 @@ MonoBehaviour:
           m_StringArgument: Social
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420034}
         m_TargetAssemblyTypeName: SectionSound, Assembly-CSharp
         m_MethodName: playSectionClickSoundEffect
@@ -748,6 +749,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &255915995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +925,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330243339}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1141,6 +1145,8 @@ CanvasRenderer:
 >>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
 =======
 >>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,6 +1242,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!114 &519420033
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1291,6 +1298,8 @@ MonoBehaviour:
   Right: {fileID: 0}
   Wrong: {fileID: 0}
   GameOver: {fileID: 0}
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!1 &529608538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1587,7 @@ MonoBehaviour:
           m_StringArgument: Economic
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420034}
         m_TargetAssemblyTypeName: SectionSound, Assembly-CSharp
         m_MethodName: playSectionClickSoundEffect
@@ -1590,6 +1600,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &557199262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2058,6 +2070,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420033}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: playThisSoundEffect
@@ -2070,6 +2083,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &875106297
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,6 +2218,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420033}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: playThisSoundEffect
@@ -2215,6 +2231,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &913084108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2548,6 +2566,7 @@ MonoBehaviour:
           m_StringArgument: Civil
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420034}
         m_TargetAssemblyTypeName: SectionSound, Assembly-CSharp
         m_MethodName: playSectionClickSoundEffect
@@ -2560,6 +2579,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &940987292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2866,6 +2887,7 @@ CanvasRenderer:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!1 &1388694546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3158,6 +3180,8 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 =======
 >>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!1 &1581465697
 GameObject:
   m_ObjectHideFlags: 0
@@ -3253,6 +3277,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420033}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: playThisSoundEffect
@@ -3265,6 +3290,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &1581465700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3397,6 +3424,7 @@ MonoBehaviour:
           m_StringArgument: Political
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420034}
         m_TargetAssemblyTypeName: SectionSound, Assembly-CSharp
         m_MethodName: playSectionClickSoundEffect
@@ -3409,6 +3437,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &1652758623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3542,6 +3572,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
       - m_Target: {fileID: 519420033}
         m_TargetAssemblyTypeName: ButtonSound, Assembly-CSharp
         m_MethodName: playThisSoundEffect
@@ -3554,6 +3585,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!114 &1791435003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6503,7 +6536,10 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+<<<<<<< HEAD
 >>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
+=======
+>>>>>>> parent of c9b7f61 (push)
 --- !u!224 &4938683963037427297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8177,6 +8213,7 @@ SceneRoots:
   - {fileID: 393553929}
 =======
   - {fileID: 204422972}
+<<<<<<< HEAD
 >>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
 =======
   - {fileID: 204422972}
@@ -8190,3 +8227,5 @@ SceneRoots:
 =======
   - {fileID: 204422972}
 >>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
+=======
+>>>>>>> parent of c9b7f61 (push)
