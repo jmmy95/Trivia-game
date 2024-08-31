@@ -5,10 +5,6 @@ using TMPro;
 using UnityEngine.UI;
 
 <<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 public class QuestionManager : MonoBehaviour {
     //trying to work on the correct and incorrect sounds
     // public AudioSource answerSound;
@@ -22,31 +18,11 @@ public class QuestionManager : MonoBehaviour {
     public Text timeScore;
     public Text FinalScore;
 =======
-=======
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
 public class QuestionManager : MonoBehaviour
  {
     public TextMeshProUGUI questionText, scoreText, timeScore, FinalScore;
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 >>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
-=======
->>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
     public Button[] replyButtons;
     public Button[] categoryButtons;  // The buttons for the categories
 
