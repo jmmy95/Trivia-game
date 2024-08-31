@@ -283,71 +283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &910415003
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 910415005}
-  - component: {fileID: 910415004}
-  m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &910415004
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910415003}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b85a72bfe6ece4418ec5b746cdf3f5a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  questionText: {fileID: 0}
-  scoreText: {fileID: 0}
-  timeScore: {fileID: 0}
-  FinalScore: {fileID: 0}
-  replyButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  categoryButtons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  politicalQuestionsCategory: {fileID: 11400000, guid: bfae1e5533f13f54cba6d5e4a91003a9, type: 2}
-  civilQuestionsCategory: {fileID: 11400000, guid: ad551ef0abbbbfa4eb3c1ce84fc63af2, type: 2}
-  economicQuestionsCategory: {fileID: 11400000, guid: 7f8d8a27873e76c4fa5cca51fad2520b, type: 2}
-  socialQuestionsCategory: {fileID: 11400000, guid: 141f4d0765a564443b8839637ef46309, type: 2}
-  Right: {fileID: 0}
-  Wrong: {fileID: 0}
-  GameOver: {fileID: 0}
---- !u!4 &910415005
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 910415003}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6119709, y: -0.4855595, z: 6.4364777}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1633108354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1973,8 +1908,11 @@ SceneRoots:
   - {fileID: 1633108358}
   - {fileID: 150166843}
   - {fileID: 2363332481159186096}
+<<<<<<< HEAD
   - {fileID: 910415005}
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> 8adc183a958bc15dc53253d3f23491452c5a7789
   - {fileID: 1674600885}
 >>>>>>> 29566f8c9985c0ef86c1a88c1e4292a98d1d00a5
