@@ -836,18 +836,6 @@ MonoBehaviour:
           m_StringArgument: Civil
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2336439353878978578}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!224 &562630572197351413
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2062,18 +2050,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Economic
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2336439353878978578}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &2482599944681301354
 CanvasRenderer:
@@ -4182,18 +4158,6 @@ MonoBehaviour:
           m_StringArgument: Social
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2336439353878978578}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!1 &6878790194325766501
 GameObject:
   m_ObjectHideFlags: 0
@@ -4472,18 +4436,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: Political
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2336439353878978578}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &7646112838528918507
 MonoBehaviour:
