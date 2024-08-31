@@ -22,5 +22,12 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
        #endif
     }
+
+    // Placeholder method for the leaderboard button
+    public void LeaderboardButton()
+    {
+        Debug.Log("Leaderboard button pressed!");
+        // Add functionality to display the leaderboard UI here when ready
+    }
 }
 
