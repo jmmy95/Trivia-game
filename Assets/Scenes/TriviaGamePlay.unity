@@ -224,20 +224,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b85a72bfe6ece4418ec5b746cdf3f5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: {fileID: 0}
-  scoreText: {fileID: 0}
-  timeScore: {fileID: 0}
+  questionText: {fileID: 5200794550031319325}
+  scoreText: {fileID: 3954411628151841048}
+  timeScore: {fileID: 7918308393952866874}
   FinalScore: {fileID: 0}
   replyButtons:
-  - {fileID: 1581465699}
-  - {fileID: 913084107}
-  - {fileID: 875106296}
-  - {fileID: 1791435002}
+  - {fileID: 38080717207693690}
+  - {fileID: 8002571786348575233}
+  - {fileID: 5451716878592690036}
+  - {fileID: 4917697060685471194}
   categoryButtons:
-  - {fileID: 1652758622}
-  - {fileID: 557199261}
-  - {fileID: 940987291}
-  - {fileID: 255915994}
+  - {fileID: 5475463185938267828}
+  - {fileID: 9099871949196666693}
+  - {fileID: 72388960184211308}
+  - {fileID: 2693348870831366546}
   politicalQuestionsCategory: {fileID: 11400000, guid: bfae1e5533f13f54cba6d5e4a91003a9, type: 2}
   civilQuestionsCategory: {fileID: 11400000, guid: ad551ef0abbbbfa4eb3c1ce84fc63af2, type: 2}
   economicQuestionsCategory: {fileID: 11400000, guid: 7f8d8a27873e76c4fa5cca51fad2520b, type: 2}
@@ -1103,7 +1103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &663373280
 Transform:
   m_ObjectHideFlags: 0
@@ -1423,87 +1423,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 869668707}
   m_CullTransparentMesh: 1
---- !u!1 &873801309
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 873801310}
-  - component: {fileID: 873801311}
-  - component: {fileID: 873801312}
-  m_Layer: 5
-  m_Name: QuestionText
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &873801310
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873801309}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.77373, y: 0.77373, z: 0.77373}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1268322071}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 14.01}
-  m_SizeDelta: {x: 857.78, y: 86.9}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &873801311
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873801309}
-  m_CullTransparentMesh: 1
---- !u!114 &873801312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 873801309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 0
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 32
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 3
-    m_MaxSize: 40
-    m_Alignment: 4
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Questions
-
-'
 --- !u!1 &875106294
 GameObject:
   m_ObjectHideFlags: 0
@@ -2280,7 +2199,6 @@ RectTransform:
   - {fileID: 4175069651021357931}
   - {fileID: 2085917729}
   - {fileID: 1944454292}
-  - {fileID: 873801310}
   - {fileID: 663373280}
   - {fileID: 1298791662}
   - {fileID: 869668708}
@@ -2366,81 +2284,6 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1298791661}
-  m_CullTransparentMesh: 1
---- !u!1 &1507988876
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1507988877}
-  - component: {fileID: 1507988879}
-  - component: {fileID: 1507988878}
-  m_Layer: 5
-  m_Name: Categories
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!224 &1507988877
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507988876}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.0066403556, y: 0.0066403556, z: 0.0066403556}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1944454292}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.3929672, y: 1.8353767}
-  m_SizeDelta: {x: 800, y: 580}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1507988878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507988876}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a9eb49c82a6da7f40856073f1399db5b, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1507988879
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1507988876}
   m_CullTransparentMesh: 1
 --- !u!1 &1581465697
 GameObject:
@@ -2855,7 +2698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1944454292
 Transform:
   m_ObjectHideFlags: 0
@@ -2869,7 +2712,6 @@ Transform:
   m_LocalScale: {x: 63.537502, y: 63.537502, z: 63.537502}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1507988877}
   - {fileID: 1652758621}
   - {fileID: 557199260}
   - {fileID: 940987290}
@@ -3203,7 +3045,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1936434276934867955}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: CheckReply
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Political
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &49702169230377805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3256,16 +3110,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: OnCategorySelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Economic
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 252186220317096709}
@@ -3483,7 +3337,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 48.2, y: -19.9}
+  m_AnchoredPosition: {x: 48.200012, y: -19.899994}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &715112773751014617
@@ -3544,7 +3398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: I've forgotten
+  m_text: Civil Rights
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3948,7 +3802,7 @@ GameObject:
   - component: {fileID: 5156016975998776730}
   - component: {fileID: 4917697060685471194}
   m_Layer: 5
-  m_Name: Button (3)
+  m_Name: ReplyButtonFour
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4470,16 +4324,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: OnCategorySelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Civil
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 252186220317096709}
@@ -4507,7 +4361,7 @@ GameObject:
   - component: {fileID: 1936434276934867955}
   - component: {fileID: 38080717207693690}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ReplyButtonOne
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4615,7 +4469,7 @@ GameObject:
   - component: {fileID: 7094553816592135615}
   - component: {fileID: 8002571786348575233}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ReplyButtonTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4804,7 +4658,7 @@ GameObject:
   - component: {fileID: 732130804218429024}
   - component: {fileID: 2693348870831366546}
   m_Layer: 5
-  m_Name: Legal
+  m_Name: Civil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4902,7 +4756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 3.09, y: -41.91}
+  m_AnchoredPosition: {x: 3.09, y: -41.910004}
   m_SizeDelta: {x: 188.9, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &3822484352857700411
@@ -5231,7 +5085,7 @@ RectTransform:
   m_GameObject: {fileID: 252186220317096709}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4347.626}
-  m_LocalScale: {x: 48.306957, y: 48.306957, z: 48.306957}
+  m_LocalScale: {x: 1.0160879, y: 0.7154088, z: 1.0368243}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7319295811504423089}
@@ -5297,7 +5151,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -14.700012, y: -20.17}
+  m_AnchoredPosition: {x: -14.700012, y: -20.170013}
   m_SizeDelta: {x: 30, y: 30}
   m_Pivot: {x: 1, y: 1}
 --- !u!224 &4549676512772520977
@@ -5534,7 +5388,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 5156016975998776730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: CheckReply
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!224 &4938683963037427297
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5800,7 +5666,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 715112773751014617}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: CheckReply
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &5451876329847340763
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5853,16 +5731,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: OnCategorySelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Political
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 252186220317096709}
@@ -6226,7 +6104,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: -32.4}
+  m_AnchoredPosition: {x: -0.000030517578, y: -32.399994}
   m_SizeDelta: {x: 230, y: 104}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &6479076560696726993
@@ -6401,7 +6279,7 @@ GameObject:
   - component: {fileID: 715112773751014617}
   - component: {fileID: 5451716878592690036}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: ReplyButtonThree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6503,7 +6381,7 @@ RectTransform:
   m_GameObject: {fileID: 8196057080208615399}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -4347.626}
-  m_LocalScale: {x: 48.306957, y: 48.306957, z: 48.306957}
+  m_LocalScale: {x: 1.0160879, y: 0.7154088, z: 1.0368243}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5417072593861640914}
@@ -6717,7 +6595,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7094553816592135615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: CheckReply
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &8007137523324417326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7099,16 +6989,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 204422973}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: OnCategorySelected
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Social
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 252186220317096709}
