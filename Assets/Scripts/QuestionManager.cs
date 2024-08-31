@@ -4,25 +4,11 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 
-<<<<<<< HEAD
 public class QuestionManager : MonoBehaviour {
-    //trying to work on the correct and incorrect sounds
-    // public AudioSource answerSound;
-
-    // public AudioClip correctSound;
-
-    // public AudioClip incorrectSound;
-    //
-    public Text questionText;
-    public Text scoreText;
-    public Text timeScore;
-    public Text FinalScore;
-=======
-public class QuestionManager : MonoBehaviour
- {
+    
     public TextMeshProUGUI questionText, scoreText, timeScore, FinalScore;
   
->>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+
     public Button[] replyButtons;
     public Button[] categoryButtons;  // The buttons for the categories
 
