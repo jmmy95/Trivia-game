@@ -1,13 +1,46 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.UI;
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
 public class QuestionManager : MonoBehaviour {
+    //trying to work on the correct and incorrect sounds
+    // public AudioSource answerSound;
+
+    // public AudioClip correctSound;
+
+    // public AudioClip incorrectSound;
+    //
     public Text questionText;
     public Text scoreText;
     public Text timeScore;
     public Text FinalScore;
+=======
+=======
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+=======
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+=======
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+public class QuestionManager : MonoBehaviour
+ {
+    public TextMeshProUGUI questionText, scoreText, timeScore, FinalScore;
+  
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+=======
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+=======
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
+=======
+>>>>>>> 2e14b2abb6a43f5655ab685193d0bd4ae3ecaa66
     public Button[] replyButtons;
     public Button[] categoryButtons;  // The buttons for the categories
 
@@ -18,7 +51,7 @@ public class QuestionManager : MonoBehaviour {
     public QuestionsData socialQuestionsCategory;
 
     public GameObject Right;  // Reference to the "CORRECT" Text GameObject
-    public GameObject Wrong;  // Reference to the "CORRECT" Text GameObject
+    public GameObject Wrong;  // Reference to the "INCORRECT" Text GameObject
     public GameObject GameOver;
 
     private QuestionsData selectedQuestions; // To hold the currently active category
@@ -31,6 +64,11 @@ public class QuestionManager : MonoBehaviour {
         Right.gameObject.SetActive(false);
         Wrong.gameObject.SetActive(false);
         GameOver.gameObject.SetActive(false);
+
+        //checking to see if the coorect sound plays at start
+    //      if (answerSound != null && correctSound != null) {
+    //     answerSound.PlayOneShot(correctSound); // This should play the correct sound on start
+    // }
     }
 
     public void OnCategorySelected(string Category) {
@@ -64,8 +102,10 @@ public class QuestionManager : MonoBehaviour {
         }
     }
 
-    private void DisplayQuestion() {
-        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
+    private void DisplayQuestion() 
+    {
+        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) 
+        {
             questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
             Debug.Log("Displaying Question: " + questionText.text); // Log the question
 
@@ -84,13 +124,20 @@ public class QuestionManager : MonoBehaviour {
     public void CheckReply(int replyIndex) {
         if (selectedQuestions != null && replyIndex < selectedQuestions.questions.Length) {
             if (replyIndex == selectedQuestions.questions[currentQuestionIndex].correctReplyIndex) {
+                //play correct sound
+                // answerSound.PlayOneShot(correctSound);
+                
                 // Correct answer logic
                 Debug.Log("Correct!");
 
+            
                 // Show the "CORRECT" UI
                 Right.SetActive(true);
                 Wrong.SetActive(false);
             } else {
+                //play incorrect sound
+                // answerSound.PlayOneShot(incorrectSound);
+
                 // Incorrect answer logic
                 Debug.Log("Incorrect!");
 
