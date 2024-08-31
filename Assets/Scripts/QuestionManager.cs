@@ -64,8 +64,10 @@ public class QuestionManager : MonoBehaviour
         }
     }
 
-    private void DisplayQuestion() {
-        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
+    private void DisplayQuestion() 
+    {
+        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) 
+        {
             questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
             Debug.Log("Displaying Question: " + questionText.text); // Log the question
 
