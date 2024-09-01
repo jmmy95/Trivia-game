@@ -123,50 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &509408785
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 509408787}
-  - component: {fileID: 509408786}
-  m_Layer: 0
-  m_Name: MainMenu
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &509408786
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509408785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f0ab4f0702b741498a661775e091531, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &509408787
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509408785}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 432.49954, y: 158.69263, z: -17.15898}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &875012548
 GameObject:
   m_ObjectHideFlags: 0
@@ -198,26 +154,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   questionText: {fileID: 1460662656086015475}
-  scoreText: {fileID: 8778322178388973203}
-  timeScore: {fileID: 3569881626995658452}
-  FinalScore: {fileID: 8778322178388973203}
+  scoreText: {fileID: 7676767681103715830}
+  categoryTitle: {fileID: 402378878641824944}
+  timerText: {fileID: 3569881626995658452}
+  finalScoreText: {fileID: 8778322178388973203}
   replyButtons:
   - {fileID: 6696559974433953172}
   - {fileID: 3704042773680637679}
   - {fileID: 1711891746235628442}
   - {fileID: 1753752447209906484}
-  categoryButtons:
-  - {fileID: 7561405169361528227}
-  - {fileID: 6726825755816508498}
-  - {fileID: 2455143843385576571}
-  - {fileID: 464983150869019269}
+  exitButton: {fileID: 8656916324162493586}
+  gameOverPanel: {fileID: 0}
   politicalQuestionsCategory: {fileID: 11400000, guid: bfae1e5533f13f54cba6d5e4a91003a9, type: 2}
   civilQuestionsCategory: {fileID: 11400000, guid: ad551ef0abbbbfa4eb3c1ce84fc63af2, type: 2}
   economicQuestionsCategory: {fileID: 11400000, guid: 7f8d8a27873e76c4fa5cca51fad2520b, type: 2}
   socialQuestionsCategory: {fileID: 11400000, guid: 141f4d0765a564443b8839637ef46309, type: 2}
-  Right: {fileID: 0}
-  Wrong: {fileID: 0}
-  GameOver: {fileID: 4799807228446563106}
 --- !u!4 &875012550
 Transform:
   m_ObjectHideFlags: 0
@@ -957,9 +908,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 875012548}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2816,7 +2767,7 @@ GameObject:
   - component: {fileID: 436570625514707686}
   - component: {fileID: 2726985961485376388}
   m_Layer: 5
-  m_Name: SectionTitle
+  m_Name: CategoryTitle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3012,7 +2963,7 @@ RectTransform:
   m_GameObject: {fileID: 3303251348251745033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1864026, y: 0.7349902, z: 1}
+  m_LocalScale: {x: 1.1864026, y: 0.7699758, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1676730176717225532}
@@ -4227,7 +4178,7 @@ GameObject:
   - component: {fileID: 8524861657461213042}
   - component: {fileID: 1561930861254989147}
   m_Layer: 5
-  m_Name: SidePanel
+  m_Name: ReplyButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5203,10 +5154,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 875012549}
+        m_TargetAssemblyTypeName: QuestionManager, Assembly-CSharp
+        m_MethodName: ExitGame
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5214,18 +5165,6 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 3303251348251745033}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
         m_CallState: 2
 --- !u!222 &8664543608658729022
 CanvasRenderer:
@@ -5624,4 +5563,3 @@ SceneRoots:
   - {fileID: 1665344430}
   - {fileID: 1746503355}
   - {fileID: 875012550}
-  - {fileID: 509408787}

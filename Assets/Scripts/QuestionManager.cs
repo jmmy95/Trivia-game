@@ -1,46 +1,56 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
-using UnityEngine.UI;
+using TMPro;  // Import TextMeshPro
+using UnityEngine.UI; // Import Unity UI
+using UnityEngine.SceneManagement;
 
 public class QuestionManager : MonoBehaviour {
-    
-    public TextMeshProUGUI questionText, scoreText, timeScore, FinalScore;
-  
+    // Reference UI Elements
+    public TMP_Text questionText; // Updated to TMP_Text
+    public TMP_Text scoreText;    // Updated to TMP_Text
+    public TMP_Text categoryTitle;  // Category Title TMP_Text
+    public TMP_Text timerText, finalScoreText;    // Timer TMP_Text
+    public Button[] replyButtons; // Array for reply buttons
+    public Button exitButton;     // Exit button
+    public GameObject gameOverPanel;
 
-    public Button[] replyButtons;
-    public Button[] categoryButtons;  // The buttons for the categories
-
-    // References to ScriptableObjects for each category
+    // Other variables and references
     public QuestionsData politicalQuestionsCategory;
     public QuestionsData civilQuestionsCategory;
     public QuestionsData economicQuestionsCategory;
     public QuestionsData socialQuestionsCategory;
 
-    public GameObject Right;  // Reference to the "CORRECT" Text GameObject
-    public GameObject Wrong;  // Reference to the "INCORRECT" Text GameObject
-    public GameObject GameOver;
-
-    private QuestionsData selectedQuestions; // To hold the currently active category
+    private QuestionsData selectedQuestions; // Currently selected questions category
     private int currentQuestionIndex;
+    private int score;  // Player's score
+    private float timer;  // Timer for question
 
     private void Start() {
-        // Hide the question and reply UI initially
-        setQuestionUIActive(false);
-        SetCategoryUIActive(true); // Show categories initially
-        Right.gameObject.SetActive(false);
-        Wrong.gameObject.SetActive(false);
-        GameOver.gameObject.SetActive(false);
+        // Initialize UI and game logic
+        InitializeGame();
+        //currentTime = 100f;
+    }
 
-        //checking to see if the coorect sound plays at start
-    //      if (answerSound != null && correctSound != null) {
-    //     answerSound.PlayOneShot(correctSound); // This should play the correct sound on start
-    // }
+    private void Update() {
+        if (timerText.IsActive() == true) { UpdateTimerUI(); }
+    }
+
+    private void InitializeGame() {
+        // Hide UI elements initially
+        //SetQuestionUIActive(false);
+        score = 0;  // Initialize score
+        UpdateScoreUI();
+        timer = 30f;  // Example timer value, can be changed
+
+
+
+        // Setup exit button functionality
+        exitButton.onClick.AddListener(ExitGame);
     }
 
     public void OnCategorySelected(string Category) {
-        // Determine which category was selected
+        // Logic to handle category selection
         switch (Category) {
             case "Political":
                 selectedQuestions = politicalQuestionsCategory;
@@ -59,10 +69,13 @@ public class QuestionManager : MonoBehaviour {
                 return;
         }
 
+        categoryTitle.text = Category; // Update category title
+        questionText.text = "This is a " + Category + " question here answewr";
+
+
         if (selectedQuestions != null && selectedQuestions.questions.Length > 0) {
-            // Hide category buttons and show the first question from the selected category
-            SetCategoryUIActive(false);
-            setQuestionUIActive(true);
+            categoryTitle.text = Category; // Update category title
+            SetQuestionUIActive(true);     // Show question UI
             currentQuestionIndex = 0;
             DisplayQuestion();
         } else {
@@ -70,18 +83,13 @@ public class QuestionManager : MonoBehaviour {
         }
     }
 
-    private void DisplayQuestion() 
-    {
-        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) 
-        {
+    private void DisplayQuestion() {
+        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
             questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
-            Debug.Log("Displaying Question: " + questionText.text); // Log the question
 
             for (int i = 0; i < replyButtons.Length; i++) {
-                string reply = selectedQuestions.questions[currentQuestionIndex].replies[i];
-                Debug.Log("Displaying Reply: " + reply); // Log each reply
-
-                replyButtons[i].GetComponentInChildren<Text>().text = reply;
+                TMP_Text buttonText = replyButtons[i].GetComponentInChildren<TMP_Text>();
+                buttonText.text = selectedQuestions.questions[currentQuestionIndex].replies[i];
                 int replyIndex = i; // Capture the index for use in the lambda
                 replyButtons[i].onClick.RemoveAllListeners();
                 replyButtons[i].onClick.AddListener(() => CheckReply(replyIndex));
@@ -89,73 +97,54 @@ public class QuestionManager : MonoBehaviour {
         }
     }
 
-    public void CheckReply(int replyIndex) {
-        if (selectedQuestions != null && replyIndex < selectedQuestions.questions.Length) {
-            if (replyIndex == selectedQuestions.questions[currentQuestionIndex].correctReplyIndex) {
-                //play correct sound
-                // answerSound.PlayOneShot(correctSound);
-                
-                // Correct answer logic
-                Debug.Log("Correct!");
-
-            
-                // Show the "CORRECT" UI
-                Right.SetActive(true);
-                Wrong.SetActive(false);
-            } else {
-                //play incorrect sound
-                // answerSound.PlayOneShot(incorrectSound);
-
-                // Incorrect answer logic
-                Debug.Log("Incorrect!");
-
-                // Show the "INCORRECT" UI
-                Right.SetActive(false);
-                Wrong.SetActive(true);
-            }
-
-            // Hide the "CORRECT" or "INCORRECT" UI after a delay
-            StartCoroutine(HideFeedback());
-
-            // Move to the next question
-            currentQuestionIndex++;
-
-            if (currentQuestionIndex < selectedQuestions.questions.Length) {
-                DisplayQuestion();
-            } else {
-                // End of questions logic
-                Debug.Log("End of Category Questions");
-            }
+    private void CheckReply(int replyIndex) {
+        if (replyIndex == selectedQuestions.questions[currentQuestionIndex].correctReplyIndex) {
+            // Correct answer logic
+            score++;
+            UpdateScoreUI();
         } else {
-            Debug.LogError("SelectedQuestions is null or invalid reply index.");
+            // Incorrect answer logic
+        }
+
+        currentQuestionIndex++;
+        if (currentQuestionIndex < selectedQuestions.questions.Length) {
+            DisplayQuestion();
+        } else {
+            EndGame();
         }
     }
 
-    // Add a coroutine to hide feedback after a short delay
-    private IEnumerator HideFeedback() {
-        yield return new WaitForSeconds(2); // Wait for 2 seconds
-        Right.SetActive(false);
-        Wrong.SetActive(false);
+    private void UpdateScoreUI() {
+        scoreText.text = "Score: " + score;
     }
 
-    private void SetCategoryUIActive(bool isActive) {
-        foreach (Button btn in categoryButtons) {
-            if (btn != null) {
-                btn.gameObject.SetActive(isActive);
-            }
+    private void UpdateTimerUI() {
+        //timerText.text = "Time: " + Mathf.Round(timer).ToString();
+
+        timer -= 1 * Time.deltaTime;
+        timerText.text = "Time: " + timer.ToString("0");
+
+        if (timer <= 0 || timerText.text == "0") {
+            timerText.text = "0";
+            gameOverPanel.SetActive(true);
+            finalScoreText.text = "You scored: " + score;
+
         }
     }
 
-
-    private void setQuestionUIActive(bool isActive) {
-        if (questionText != null) {
-            questionText.gameObject.SetActive(isActive);
-        }
-
+    private void SetQuestionUIActive(bool isActive) {
+        questionText.gameObject.SetActive(isActive);
         foreach (Button btn in replyButtons) {
-            if (btn != null) {
-                btn.gameObject.SetActive(isActive);
-            }
+            btn.gameObject.SetActive(isActive);
         }
+    }
+
+    private void EndGame() {
+        // Logic to handle end of the game
+    }
+
+    private void ExitGame() {
+        // Logic to exit the game or return to main menu
+        SceneManager.LoadScene("MainMenu"); // Example, assuming "MainMenu" is the name of your main menu scene
     }
 }
