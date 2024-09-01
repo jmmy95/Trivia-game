@@ -50,15 +50,10 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-<<<<<<< HEAD
         "com.unity.2d.animation": "9.1.0",
         "com.unity.2d.common": "8.0.2",
         "com.unity.2d.sprite": "1.0.0"
-=======
-        "com.unity.2d.common": "8.0.1",
-        "com.unity.2d.sprite": "1.0.0",
-        "com.unity.2d.animation": "9.0.1"
->>>>>>> cde8945668bc3ff87e253a3d9cf4d0ef8b684887
+        
       },
       "url": "https://packages.unity.com"
     },
