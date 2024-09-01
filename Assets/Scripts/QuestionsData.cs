@@ -3,14 +3,14 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New QuestionData", menuName = "QuestionData")]
 public class QuestionsData : ScriptableObject
 {
-    public enum category 
+    public enum category
     {
-    Political_Rights,
-    Civil_Rights,
-    Economic_Rights,
-    Social_Rights
+        Political_Rights,
+        Civil_Rights,
+        Economic_Rights,
+        Social_Rights
     }
-    
+
     [System.Serializable]
 
     public struct Question
@@ -22,5 +22,6 @@ public class QuestionsData : ScriptableObject
     }
 
     public Question[] questions;//hold collection of questions and their associated data.
-    
+
+
 }

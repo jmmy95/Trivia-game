@@ -4,46 +4,86 @@ using UnityEngine;
 using TMPro;  // Import TextMeshPro
 using UnityEngine.UI; // Import Unity UI
 using UnityEngine.SceneManagement;
+using System;
 
 public class QuestionManager : MonoBehaviour {
     // Reference UI Elements
-    public TMP_Text questionText; // Updated to TMP_Text
-    public TMP_Text scoreText;    // Updated to TMP_Text
+    public TMP_Text questionText, scoreText;    // Updated to TMP_Text
     public TMP_Text categoryTitle;  // Category Title TMP_Text
     public TMP_Text timerText, finalScoreText;    // Timer TMP_Text
     public Button[] replyButtons; // Array for reply buttons
     public Button exitButton;     // Exit button
-    public GameObject gameOverPanel;
 
-    // Other variables and references
-    public QuestionsData politicalQuestionsCategory;
-    public QuestionsData civilQuestionsCategory;
-    public QuestionsData economicQuestionsCategory;
-    public QuestionsData socialQuestionsCategory;
+    public GameObject gameOverPanel, correctPanel, incorrectPanel;
 
-    private QuestionsData selectedQuestions; // Currently selected questions category
-    private int currentQuestionIndex;
+    List<Question> politicalquestionlist = new List<Question>();
+    List<Question> civilquestionlist = new List<Question>();
+    List<Question> economicquestionlist = new List<Question>();
+    List<Question> socialquestionlist = new List<Question>();
+
+    private int selectedQuestionsCategory; // Currently selected questions category
+    private int currentQuestionIndex, tableSize;
     private int score;  // Player's score
     private float timer;  // Timer for question
 
-    private void Start() {
-        // Initialize UI and game logic
+    public TextAsset questioncsvfile;
+
+    [System.Serializable]
+    public struct Question {
+        public int questionCategory; //Store category of questions (Political, Economic, Social and Civil)
+        public string questionText;     //store questions.
+        public string[] replies;        //Store replies.
+        public int correctReplyIndex;    //Store correct replyindex.
+        public string CorrectAnswer;
+    }
+
+    [System.Serializable]
+    public class QuestionList {
+        public Question[] question;
+
+    }
+
+    public QuestionList myQuestionList = new QuestionList();
+
+    // Start is called before the first frame update
+    void Start() {
+        ReadCSV();
         InitializeGame();
-        //currentTime = 100f;
+    }
+
+    void ReadCSV() {
+        string[] data = questioncsvfile.text.Split(new string[] { ",", "\n" }, StringSplitOptions.None);
+
+        tableSize = data.Length / 8 - 1;
+        myQuestionList.question = new Question[tableSize];
+
+        for (int i = 0; i < tableSize; i++) {
+            myQuestionList.question[i] = new Question();
+            myQuestionList.question[i].questionCategory = int.Parse(data[8 * (i + 1)]);
+            myQuestionList.question[i].questionText = data[8 * (i + 1) + 1];
+            List<string> list = new List<string>(4);
+            list.Add(data[8 * (i + 1) + 2]);
+            list.Add(data[8 * (i + 1) + 3]);
+            list.Add(data[8 * (i + 1) + 4]);
+            list.Add(data[8 * (i + 1) + 5]);
+            myQuestionList.question[i].replies = list.ToArray();
+            myQuestionList.question[i].correctReplyIndex = int.Parse(data[8 * (i + 1) + 6]);
+            myQuestionList.question[i].CorrectAnswer = data[8 * (i + 1) + 7];
+        }
+
     }
 
     private void Update() {
-        if (timerText.IsActive() == true) { UpdateTimerUI(); }
+        if (timerText.IsActive() == true) { UpdateTimerUI(); } else {
+            Time.timeScale = 0;
+            timer = 30f;
+        }
     }
 
     private void InitializeGame() {
-        // Hide UI elements initially
-        //SetQuestionUIActive(false);
         score = 0;  // Initialize score
         UpdateScoreUI();
         timer = 30f;  // Example timer value, can be changed
-
-
 
         // Setup exit button functionality
         exitButton.onClick.AddListener(ExitGame);
@@ -53,61 +93,141 @@ public class QuestionManager : MonoBehaviour {
         // Logic to handle category selection
         switch (Category) {
             case "Political":
-                selectedQuestions = politicalQuestionsCategory;
-                break;
-            case "Social":
-                selectedQuestions = socialQuestionsCategory;
+                selectedQuestionsCategory = 1;
                 break;
             case "Civil":
-                selectedQuestions = civilQuestionsCategory;
+                selectedQuestionsCategory = 2;
                 break;
             case "Economic":
-                selectedQuestions = economicQuestionsCategory;
+                selectedQuestionsCategory = 3;
                 break;
+            case "Social":
+                selectedQuestionsCategory = 4;
+                break;
+
             default:
                 Debug.LogError("Invalid category selected: " + Category);
                 return;
         }
 
-        categoryTitle.text = Category; // Update category title
+        categoryTitle.text = Category + " Rights Questions"; // Update category title
         questionText.text = "This is a " + Category + " question here answewr";
+        categoryTitle.text = Category + " Questions"; // Update category title
+        SetQuestionUIActive(true);     // Show question UI
+        currentQuestionIndex = 0;
+        DisplayQuestion();
 
-
-        if (selectedQuestions != null && selectedQuestions.questions.Length > 0) {
-            categoryTitle.text = Category; // Update category title
-            SetQuestionUIActive(true);     // Show question UI
-            currentQuestionIndex = 0;
-            DisplayQuestion();
-        } else {
-            Debug.LogError("No questions available for the selected category: " + Category);
-        }
     }
 
     private void DisplayQuestion() {
-        if (selectedQuestions != null && currentQuestionIndex < selectedQuestions.questions.Length) {
-            questionText.text = selectedQuestions.questions[currentQuestionIndex].questionText;
 
-            for (int i = 0; i < replyButtons.Length; i++) {
-                TMP_Text buttonText = replyButtons[i].GetComponentInChildren<TMP_Text>();
-                buttonText.text = selectedQuestions.questions[currentQuestionIndex].replies[i];
-                int replyIndex = i; // Capture the index for use in the lambda
-                replyButtons[i].onClick.RemoveAllListeners();
-                replyButtons[i].onClick.AddListener(() => CheckReply(replyIndex));
+        for (int i = 0; i < tableSize; i++) {
+            if (myQuestionList.question[i].questionCategory == 1) {
+                politicalquestionlist.Add(myQuestionList.question[i]);
+            } else if (myQuestionList.question[i].questionCategory == 2) {
+                civilquestionlist.Add(myQuestionList.question[i]);
+            } else if (myQuestionList.question[i].questionCategory == 3) {
+                economicquestionlist.Add(myQuestionList.question[i]);
+            } else if (myQuestionList.question[i].questionCategory == 4) {
+                socialquestionlist.Add(myQuestionList.question[i]);
+            }
+        }
+
+        if (selectedQuestionsCategory == 1) {
+            questionText.text = politicalquestionlist[currentQuestionIndex].questionText;
+            for (int x = 0; x < replyButtons.Length; x++) {
+                TMP_Text buttonText = replyButtons[x].GetComponentInChildren<TMP_Text>();
+                buttonText.text = politicalquestionlist[currentQuestionIndex].replies[x];
+                int replyIndex = x; // Capture the index for use in the lambda
+                replyButtons[x].onClick.RemoveAllListeners();
+                replyButtons[x].onClick.AddListener(() => CheckReply(replyIndex));
+            }
+        } else if (selectedQuestionsCategory == 2) {
+            questionText.text = civilquestionlist[currentQuestionIndex].questionText;
+            for (int x = 0; x < replyButtons.Length; x++) {
+                TMP_Text buttonText = replyButtons[x].GetComponentInChildren<TMP_Text>();
+                buttonText.text = civilquestionlist[currentQuestionIndex].replies[x];
+                int replyIndex = x; // Capture the index for use in the lambda
+                replyButtons[x].onClick.RemoveAllListeners();
+                replyButtons[x].onClick.AddListener(() => CheckReply(replyIndex));
+            }
+        } else if (selectedQuestionsCategory == 3) {
+            questionText.text = economicquestionlist[currentQuestionIndex].questionText;
+            for (int x = 0; x < replyButtons.Length; x++) {
+                TMP_Text buttonText = replyButtons[x].GetComponentInChildren<TMP_Text>();
+                buttonText.text = economicquestionlist[currentQuestionIndex].replies[x];
+                int replyIndex = x; // Capture the index for use in the lambda
+                replyButtons[x].onClick.RemoveAllListeners();
+                replyButtons[x].onClick.AddListener(() => CheckReply(replyIndex));
+            }
+        } else if (selectedQuestionsCategory == 4) {
+            questionText.text = socialquestionlist[currentQuestionIndex].questionText;
+            for (int x = 0; x < replyButtons.Length; x++) {
+                TMP_Text buttonText = replyButtons[x].GetComponentInChildren<TMP_Text>();
+                buttonText.text = socialquestionlist[currentQuestionIndex].replies[x];
+                int replyIndex = x; // Capture the index for use in the lambda
+                replyButtons[x].onClick.RemoveAllListeners();
+                replyButtons[x].onClick.AddListener(() => CheckReply(replyIndex));
             }
         }
     }
 
     private void CheckReply(int replyIndex) {
-        if (replyIndex == selectedQuestions.questions[currentQuestionIndex].correctReplyIndex) {
-            // Correct answer logic
-            score++;
-            UpdateScoreUI();
-        } else {
-            // Incorrect answer logic
+        if (selectedQuestionsCategory == 1) {
+            if (replyIndex == politicalquestionlist[currentQuestionIndex].correctReplyIndex) {
+                // Correct answer logic
+                score++;
+                UpdateScoreUI();
+                correctPanel.gameObject.SetActive(true);
+            } else {
+                // Incorrect answer logic
+                incorrectPanel.gameObject.SetActive(true);
+            }
+        } else if (selectedQuestionsCategory == 2) {
+            if (replyIndex == civilquestionlist[currentQuestionIndex].correctReplyIndex) {
+                // Correct answer logic
+                score++;
+                UpdateScoreUI();
+                correctPanel.gameObject.SetActive(true);
+
+            } else {
+                // Incorrect answer logic
+                incorrectPanel.gameObject.SetActive(true);
+
+            }
+        } else if (selectedQuestionsCategory == 3) {
+            if (replyIndex == economicquestionlist[currentQuestionIndex].correctReplyIndex) {
+                // Correct answer logic
+                score++;
+                UpdateScoreUI();
+                //incorrectui.gameobject.setActive;
+                correctPanel.gameObject.SetActive(true);
+
+            } else {
+                // Incorrect answer logic
+                //incorrectui.gameobject.setActive;
+                incorrectPanel.gameObject.SetActive(true);
+
+            }
+        } else if (selectedQuestionsCategory == 4) {
+            if (replyIndex == socialquestionlist[currentQuestionIndex].correctReplyIndex) {
+                // Correct answer logic
+                score++;
+                UpdateScoreUI();
+                //incorrectui.gameobject.setActive;
+                correctPanel.gameObject.SetActive(true);
+
+            } else {
+                // Incorrect answer logic
+                //incorrectui.gameobject.setActive;
+                incorrectPanel.gameObject.SetActive(true);
+
+            }
         }
 
+
         currentQuestionIndex++;
-        if (currentQuestionIndex < selectedQuestions.questions.Length) {
+        if (currentQuestionIndex < tableSize) {
             DisplayQuestion();
         } else {
             EndGame();
@@ -116,11 +236,13 @@ public class QuestionManager : MonoBehaviour {
 
     private void UpdateScoreUI() {
         scoreText.text = "Score: " + score;
+        timer = 30f;
     }
 
     private void UpdateTimerUI() {
         //timerText.text = "Time: " + Mathf.Round(timer).ToString();
 
+        Time.timeScale = 1;
         timer -= 1 * Time.deltaTime;
         timerText.text = "Time: " + timer.ToString("0");
 
@@ -145,6 +267,6 @@ public class QuestionManager : MonoBehaviour {
 
     private void ExitGame() {
         // Logic to exit the game or return to main menu
-        SceneManager.LoadScene("MainMenu"); // Example, assuming "MainMenu" is the name of your main menu scene
+        SceneManager.LoadScene("SampleScene"); // Example, assuming "MainMenu" is the name of your main menu scene
     }
 }
