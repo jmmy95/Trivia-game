@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &109368535 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3897155781823803734, guid: 14a3adadcf7f9f5418653374a34c43d1, type: 3}
-  m_PrefabInstance: {fileID: 8451610181325192344}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -139,6 +134,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -220,6 +216,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &519420033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b36794a43beb740758eb142215d69ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sectionClick: {fileID: 1800408583}
+  quitClick: {fileID: 0}
+  leaderboardClick: {fileID: 0}
 --- !u!1 &737137698
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,23 +434,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bd49c49576be744cbf1692175e5f425, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  questionText: {fileID: 1968889103389054645}
-  scoreText: {fileID: 3532978579086073041}
-  categoryTitle: {fileID: 2295642123087058049}
-  timerText: {fileID: 3376159553158688905}
-  finalScoreText: {fileID: 5272223485011883603}
-  replyButtons:
-  - {fileID: 554045639235712255}
-  - {fileID: 2948310190138298995}
-  - {fileID: 4896169074322049241}
-  - {fileID: 6813618448830802737}
-  exitButton: {fileID: 7518398900389899021}
-  gameOverPanel: {fileID: 1273289465362533105}
-  correctPanel: {fileID: 1409563259}
-  incorrectPanel: {fileID: 109368535}
-  questioncsvfile: {fileID: 4900000, guid: c3509168f619f6b4b8b7daeaed851329, type: 3}
-  myQuestionList:
-    question: []
 --- !u!4 &1032515405
 Transform:
   m_ObjectHideFlags: 0
@@ -467,11 +461,135 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d9b70f8467eb0d4e8a2662c16b99c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1409563259 stripped
+  LeaderboardUI: {fileID: 0}
+--- !u!1 &1800408582
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4856665928910221810, guid: b57a00e7377d18a44aad84dd93c7377e, type: 3}
-  m_PrefabInstance: {fileID: 1853481551116757545}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1800408584}
+  - component: {fileID: 1800408583}
+  m_Layer: 0
+  m_Name: AudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1800408583
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800408582}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: e5bf363f8ccff4a679526b23e65a118a, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1800408584
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800408582}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 293.0567, y: 158.94176, z: -0.36988282}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5220959858521620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6121,6 +6239,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 519420033}
+        m_TargetAssemblyTypeName: SectionSound, Assembly-CSharp
+        m_MethodName: PlaySectionClickSoundEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &7724326754124401684
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6904,3 +7034,4 @@ SceneRoots:
   - {fileID: 1032515405}
   - {fileID: 1853481551116757545}
   - {fileID: 8451610181325192344}
+  - {fileID: 1800408584}
