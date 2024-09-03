@@ -76,7 +76,6 @@ PlayerSettings:
   androidMinimumWindowWidth: 400
   androidMinimumWindowHeight: 300
   androidFullscreenMode: 1
-  androidAutoRotationBehavior: 1
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
   runInBackground: 0
@@ -137,8 +136,6 @@ PlayerSettings:
   vulkanEnableLateAcquireNextImage: 0
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
-  visionOSBundleVersion: 1.0
-  tvOSBundleVersion: 1.0
   bundleVersion: 1.0
   preloadedAssets: []
   metroInputSource: 0
@@ -575,7 +572,7 @@ PlayerSettings:
   blurSplashScreenBackground: 1
   spritePackerPolicy: 
   webGLMemorySize: 32
-  webGLExceptionSupport: 1
+  webGLExceptionSupport: 0
   webGLNameFilesAsHashes: 0
   webGLShowDiagnostics: 0
   webGLDataCaching: 1
@@ -701,7 +698,13 @@ PlayerSettings:
   XboxOneOverrideIdentityName: 
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
-  cloudServicesEnabled: {}
+  cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -721,11 +724,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 3cf4eed7-410c-4d6c-8cb8-b54b630e82fe
+  cloudProjectId: 505691df-6bb4-49b1-9664-86352f7e2b71
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Triviagame
-  organizationId: jmmy95
+  organizationId: bawarockc
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}

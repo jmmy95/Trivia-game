@@ -38,17 +38,22 @@ public class QuestionManager : MonoBehaviour {
     }
 
     [System.Serializable]
-    public class QuestionList {
+    public class QuestionList 
+    {
         public Question[] question;
-
     }
 
     public QuestionList myQuestionList = new QuestionList();
 
     // Start is called before the first frame update
-    void Start() {
+    void Start() 
+    {
         ReadCSV();
         InitializeGame();
+
+        // Hide pop-ups on start
+        correctPanel.SetActive(false);
+        incorrectPanel.SetActive(false);
     }
 
     void ReadCSV() {
@@ -70,11 +75,12 @@ public class QuestionManager : MonoBehaviour {
             myQuestionList.question[i].correctReplyIndex = int.Parse(data[8 * (i + 1) + 6]);
             myQuestionList.question[i].CorrectAnswer = data[8 * (i + 1) + 7];
         }
-
     }
 
     private void Update() {
-        if (timerText.IsActive() == true) { UpdateTimerUI(); } else {
+        if (timerText.IsActive() == true) {
+            UpdateTimerUI();
+        } else {
             Time.timeScale = 0;
             timer = 30f;
         }
@@ -116,10 +122,11 @@ public class QuestionManager : MonoBehaviour {
         SetQuestionUIActive(true);     // Show question UI
         currentQuestionIndex = 0;
         DisplayQuestion();
-
     }
 
     private void DisplayQuestion() {
+        // Hide pop-ups whenever a new question is displayed
+        //HideAnswerPanels();
 
         for (int i = 0; i < tableSize; i++) {
             if (myQuestionList.question[i].questionCategory == 1) {
@@ -173,58 +180,30 @@ public class QuestionManager : MonoBehaviour {
     }
 
     private void CheckReply(int replyIndex) {
+        bool isCorrect = false; // Track if the answer is correct
+
         if (selectedQuestionsCategory == 1) {
-            if (replyIndex == politicalquestionlist[currentQuestionIndex].correctReplyIndex) {
-                // Correct answer logic
-                score++;
-                UpdateScoreUI();
-                correctPanel.gameObject.SetActive(true);
-            } else {
-                // Incorrect answer logic
-                incorrectPanel.gameObject.SetActive(true);
-            }
+            isCorrect = (replyIndex == politicalquestionlist[currentQuestionIndex].correctReplyIndex);
         } else if (selectedQuestionsCategory == 2) {
-            if (replyIndex == civilquestionlist[currentQuestionIndex].correctReplyIndex) {
-                // Correct answer logic
-                score++;
-                UpdateScoreUI();
-                correctPanel.gameObject.SetActive(true);
-
-            } else {
-                // Incorrect answer logic
-                incorrectPanel.gameObject.SetActive(true);
-
-            }
+            isCorrect = (replyIndex == civilquestionlist[currentQuestionIndex].correctReplyIndex);
         } else if (selectedQuestionsCategory == 3) {
-            if (replyIndex == economicquestionlist[currentQuestionIndex].correctReplyIndex) {
-                // Correct answer logic
-                score++;
-                UpdateScoreUI();
-                //incorrectui.gameobject.setActive;
-                correctPanel.gameObject.SetActive(true);
-
-            } else {
-                // Incorrect answer logic
-                //incorrectui.gameobject.setActive;
-                incorrectPanel.gameObject.SetActive(true);
-
-            }
+            isCorrect = (replyIndex == economicquestionlist[currentQuestionIndex].correctReplyIndex);
         } else if (selectedQuestionsCategory == 4) {
-            if (replyIndex == socialquestionlist[currentQuestionIndex].correctReplyIndex) {
-                // Correct answer logic
-                score++;
-                UpdateScoreUI();
-                //incorrectui.gameobject.setActive;
-                correctPanel.gameObject.SetActive(true);
-
-            } else {
-                // Incorrect answer logic
-                //incorrectui.gameobject.setActive;
-                incorrectPanel.gameObject.SetActive(true);
-
-            }
+            isCorrect = (replyIndex == socialquestionlist[currentQuestionIndex].correctReplyIndex);
         }
 
+        if (isCorrect) {
+            score++;
+            UpdateScoreUI();
+            StartCoroutine(ShowCorrectPanel());
+        } 
+        else {
+            //incorrectPanel.SetActive(true);
+            StartCoroutine(ShowIncorrectPanel());
+        }
+
+        // Hide pop-ups after a delay
+        //StartCoroutine(HideAnswerPanelsAfterDelay());
 
         currentQuestionIndex++;
         if (currentQuestionIndex < tableSize) {
@@ -240,33 +219,51 @@ public class QuestionManager : MonoBehaviour {
     }
 
     private void UpdateTimerUI() {
-        //timerText.text = "Time: " + Mathf.Round(timer).ToString();
-
         Time.timeScale = 1;
         timer -= 1 * Time.deltaTime;
         timerText.text = "Time: " + timer.ToString("0");
 
-        if (timer <= 0 || timerText.text == "0") {
-            timerText.text = "0";
-            gameOverPanel.SetActive(true);
-            finalScoreText.text = "You scored: " + score;
-
+        if (timer <= 0 || timerText.text == "Time: " + "0") {
+            timerText.text = "Time: " + "0";
+            EndGame();
         }
     }
+    IEnumerator ShowCorrectPanel() {
+        yield return new WaitForSeconds(0.5f);
+        correctPanel.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        correctPanel.SetActive(false);
+    }
 
-    private void SetQuestionUIActive(bool isActive) {
-        questionText.gameObject.SetActive(isActive);
+    IEnumerator ShowIncorrectPanel() {
+        yield return new WaitForSeconds(0.5f);
+        incorrectPanel.SetActive(true);
+        yield return new WaitForSeconds(1f);
+        incorrectPanel.SetActive(false);
+    }
+
+
+
+    private void SetQuestionUIActive(bool active) {
         foreach (Button btn in replyButtons) {
-            btn.gameObject.SetActive(isActive);
+            btn.gameObject.SetActive(active);
         }
+
+        questionText.gameObject.SetActive(active);
+        scoreText.gameObject.SetActive(active);
+        timerText.gameObject.SetActive(active);
     }
 
-    private void EndGame() {
-        // Logic to handle end of the game
+    public void EndGame() {
+        gameOverPanel.SetActive(true);
+        finalScoreText.text = "Final Score: " + score;
+        SetQuestionUIActive(false);
+        timerText.gameObject.SetActive(false);    // Hide timer
     }
 
     private void ExitGame() {
-        // Logic to exit the game or return to main menu
-        SceneManager.LoadScene("SampleScene"); // Example, assuming "MainMenu" is the name of your main menu scene
+        SceneManager.LoadScene("MainMenu");
     }
 }
+
+
