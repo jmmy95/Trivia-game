@@ -182,50 +182,129 @@ public class QuestionManager : MonoBehaviour {
         }
     }
 
-    private void CheckReply(int replyIndex) {
-        bool isCorrect = false; // Track if the answer is correct
+    // private void CheckReply(int replyIndex) {
+    //     bool isCorrect = false; // Track if the answer is correct
 
-        if (selectedQuestionsCategory == 1) {
-            isCorrect = (replyIndex == politicalquestionlist[currentQuestionIndex].correctReplyIndex);
-        } else if (selectedQuestionsCategory == 2) {
-            isCorrect = (replyIndex == civilquestionlist[currentQuestionIndex].correctReplyIndex);
-        } else if (selectedQuestionsCategory == 3) {
-            isCorrect = (replyIndex == economicquestionlist[currentQuestionIndex].correctReplyIndex);
-        } else if (selectedQuestionsCategory == 4) {
-            isCorrect = (replyIndex == socialquestionlist[currentQuestionIndex].correctReplyIndex);
-        }
+    //     if (selectedQuestionsCategory == 1) {
+    //         isCorrect = (replyIndex == politicalquestionlist[currentQuestionIndex].correctReplyIndex);
+    //     } else if (selectedQuestionsCategory == 2) {
+    //         isCorrect = (replyIndex == civilquestionlist[currentQuestionIndex].correctReplyIndex);
+    //     } else if (selectedQuestionsCategory == 3) {
+    //         isCorrect = (replyIndex == economicquestionlist[currentQuestionIndex].correctReplyIndex);
+    //     } else if (selectedQuestionsCategory == 4) {
+    //         isCorrect = (replyIndex == socialquestionlist[currentQuestionIndex].correctReplyIndex);
+    //     }
 
-        if (isCorrect) {
-            score++;
-            UpdateScoreUI();
-            correctPanel.SetActive(true); // show the correct answer panel
-            StartCoroutine(HideCorrectPanel()); // start coroutine to hide the correct panel
-        } 
-        else
-        {
-            incorrectPanel.SetActive(true); //show the incorrect answer panel
-            StartCoroutine(HideIncorrectPanel()); // start coroutine to hide the incorrect panel
-        }
+    //     if (isCorrect) {
+    //         score++;
+    //         UpdateScoreUI();
+    //         correctPanel.SetActive(true); // show the correct answer panel
+    //         StartCoroutine(HideCorrectPanel()); // start coroutine to hide the correct panel
+    //     } 
+    //     else
+    //     {
+    //         incorrectPanel.SetActive(true); //show the incorrect answer panel
+    //         StartCoroutine(HideIncorrectPanel()); // start coroutine to hide the incorrect panel
+    //     }
 
         
-       //coroutine to hide the correct panel after a delay
-      IEnumerator HideCorrectPanel()
-         {
-            yield return new WaitForSeconds(0.5f); // Wait for half a seconds
-            correctPanel.SetActive(false); // Hide the correct panel after a delay
-        }
-        IEnumerator HideIncorrectPanel() {
-            yield return new WaitForSeconds(0.5f); // Wait for half a seconds
-            incorrectPanel.SetActive(false); // Hide the correct panel after a delay
-        }
+    //    //coroutine to hide the correct panel after a delay
+    //   IEnumerator HideCorrectPanel()
+    //      {
+    //         yield return new WaitForSeconds(0.5f); // Wait for half a seconds
+    //         correctPanel.SetActive(false); // Hide the correct panel after a delay
+    //     }
+    //     IEnumerator HideIncorrectPanel() {
+    //         yield return new WaitForSeconds(0.5f); // Wait for half a seconds
+    //         incorrectPanel.SetActive(false); // Hide the correct panel after a delay
+    //     }
 
-        currentQuestionIndex++;
-        if (currentQuestionIndex < tableSize) {
-            DisplayQuestion();
-        } else {
-            EndGame();
-        }
+    //     currentQuestionIndex++;
+    //     if (currentQuestionIndex < tableSize) {
+    //         DisplayQuestion();
+    //     } else {
+    //         EndGame();
+    //     }
+    // }
+
+
+
+    //TESTING
+            //APLYING LOGS FOR CONFIRMATIONS
+            private void CheckReply(int replyIndex)
+{
+    // Determine if the selected answer is correct
+    bool isCorrect = false;
+
+    // Check the correct answer index based on the selected category
+    if (selectedQuestionsCategory == 1)
+    {
+        isCorrect = (replyIndex == politicalquestionlist[currentQuestionIndex].correctReplyIndex);
     }
+    else if (selectedQuestionsCategory == 2)
+    {
+        isCorrect = (replyIndex == civilquestionlist[currentQuestionIndex].correctReplyIndex);
+    }
+    else if (selectedQuestionsCategory == 3)
+    {
+        isCorrect = (replyIndex == economicquestionlist[currentQuestionIndex].correctReplyIndex);
+    }
+    else if (selectedQuestionsCategory == 4)
+    {
+        isCorrect = (replyIndex == socialquestionlist[currentQuestionIndex].correctReplyIndex);
+    }
+
+    //using logs to check if the answer is correct or it mathes the correct index
+    Debug.Log("Answer selected: " + replyIndex + ", Correct Answer: " + isCorrect);
+
+    // Hide both panels before showing the relevant one
+    correctPanel.SetActive(false);
+    incorrectPanel.SetActive(false);
+
+    // Show the correct panel based on the answer
+    if (isCorrect)
+    {
+        score++; // Increment score for correct answers
+        UpdateScoreUI();
+        correctPanel.SetActive(true); // Show the correct answer panel
+        Debug.Log("Correct Answer Selected. Score" + score);
+        StartCoroutine(HideCorrectPanel()); // Start coroutine to hide the correct panel
+    }
+    else
+    {
+        incorrectPanel.SetActive(true); // Show the incorrect answer panel
+        Debug.Log("Incorrect answer selected.");
+        StartCoroutine(HideIncorrectPanel()); // Start coroutine to hide the incorrect panel
+    }
+
+    // Move to the next question
+    currentQuestionIndex++;
+    if (currentQuestionIndex < tableSize)
+    {
+        DisplayQuestion();
+    }
+    else
+    {
+        EndGame();
+    }
+}
+
+// Coroutine to hide the correct panel after a delay
+private IEnumerator HideCorrectPanel()
+{
+    yield return new WaitForSeconds(0.5f); // Wait for half a second
+    correctPanel.SetActive(false); // Hide the correct panel after the delay
+}
+
+// Coroutine to hide the incorrect panel after a delay
+private IEnumerator HideIncorrectPanel()
+{
+    yield return new WaitForSeconds(0.5f); // Wait for half a second
+    incorrectPanel.SetActive(false); // Hide the incorrect panel after the delay
+}
+
+
+
 
     private void UpdateScoreUI() {
         scoreText.text = "Score: " + score;
